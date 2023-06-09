@@ -1,5 +1,7 @@
-<?php 
-include __DIR__ ."./partials/variables.php"
+<?php
+include __DIR__ . "./partials/varibles.php";
+
+// session_destroy();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,7 +11,7 @@ include __DIR__ ."./partials/variables.php"
     <link rel="stylesheet" href="./style.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Php Pass Gen</title>
 </head>
 
 <body>
@@ -23,10 +25,10 @@ include __DIR__ ."./partials/variables.php"
         <div id="parametro" class="d-flex align-item-center">
             <?php echo generatorPass($pswlenght) ?>
         </div>
-        <form class="d-flex justify-content-between py-5" action="index.php" method="GET">
+        <form class="d-flex justify-content-between py-5" action="/partials/session.php" method="GET">
             <div class="w-50 d-flex flex-column gap-4">
                 <label class="my-1" for="Pswlenght">Lunghezza Password</label>
-                <label class="my-1"  for="CharaRep">Consenti ripetizioni di uno o più caratteri:</label> 
+                <label class="my-1" for="CharaRep">Consenti ripetizioni di uno o più caratteri:</label> 
                 <div>
                     <button type="submit">Invia</button>
                     <button type="reset">Annulla</button>
