@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: darkblue;
+}
+h1 {
+    color:cornflowerblue;
+    text-align: center;
+}
+h2 {
+    color: white;
+    text-align: center;
+}
+#parametro {
+    color:black;
+    background-color: aquamarine;
+    padding:15px;
+    font-weight: 700;
+    margin:20px;
+}
+form {
+    background-color: white;
+    font-weight: 900;
+    margin:20px;
+    height: 300px;
+    padding:15px;
+}
