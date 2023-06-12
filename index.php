@@ -1,7 +1,11 @@
 <?php
 include __DIR__ . "./partials/varibles.php";
-
-// session_destroy();
+$result = generatorPass($pswlenght);
+if ($pswlenght) {
+    session_start();
+    $_SESSION["password"] = $result;
+    header("Location: ./partials/session.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,9 +27,9 @@ include __DIR__ . "./partials/varibles.php";
     </header>
     <main>
         <div id="parametro" class="d-flex align-item-center">
-            <?php echo generatorPass($pswlenght) ?>
+            <?php echo $result ?>
         </div>
-        <form class="d-flex justify-content-between py-5" action="/partials/session.php" method="GET">
+        <form class="d-flex justify-content-between py-5" action="index.php" method="GET">
             <div class="w-50 d-flex flex-column gap-4">
                 <label class="my-1" for="Pswlenght">Lunghezza Password</label>
                 <label class="my-1" for="CharaRep">Consenti ripetizioni di uno o più caratteri:</label> 

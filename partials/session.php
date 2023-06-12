@@ -1,8 +1,5 @@
 <?php 
-
-$date = $_SESSION['dato'];
-
-echo "Il dato recuperato dalla sessione è: " . $date;
+session_start();
 
 ?>
 <!DOCTYPE html>
@@ -11,11 +8,11 @@ echo "Il dato recuperato dalla sessione è: " . $date;
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>your new password</title>
 </head>
 
 <body>
-
+    <div>Your Password is: <?php echo $_SESSION["password"] ?> </div>
 </body>
 
 </html>
